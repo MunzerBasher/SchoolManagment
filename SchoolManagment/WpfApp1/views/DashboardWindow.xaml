@@ -1,0 +1,83 @@
+﻿<Window x:Class="School.views.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School.views"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        Title="نظام إدارة المدرسة"
+        WindowStartupLocation="CenterScreen"
+        FlowDirection="RightToLeft"
+        WindowState="Maximized"
+        Background="#F5F6FA">
+    <Window.Resources>
+        <Style x:Key="SideButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1B4F72"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#154360"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <!-- الجزء الجانبي -->
+            <ColumnDefinition Width="*"/>
+            <!-- الجزء الرئيسي -->
+        </Grid.ColumnDefinitions>
+
+        <!-- الجزء الجانبي (Sidebar) -->
+        <Border Background="#2E86DE" Grid.Column="0">
+            <StackPanel Margin="10,20">
+                <TextBlock Text="مدرستي"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,30"/>
+
+                <!-- الأزرار -->
+                <Button Content="🏠 الرئيسية" Style="{StaticResource SideButtonStyle}" Click="Home_Click"/>
+                <Button Content="🎓 الطلاب" Style="{StaticResource SideButtonStyle}" Click="Students_Click"/>
+
+
+                <Button Content="🏫 الأعوام الدراسية" Style="{StaticResource SideButtonStyle}" Click="Classes_Click"/>
+                <Button Content="🏫 الفصول الدراسية" Style="{StaticResource SideButtonStyle}" Click="Button_Click"/>
+                <Button Content="🏫 المراحل الدراسية" Style="{StaticResource SideButtonStyle}" Click="Button_Click_1" AutomationProperties.Name="AcademicLevels"/>
+                <Button Content="🏫 الصفوف الدراسية" Style="{StaticResource SideButtonStyle}" Click="Button_Click_2"/>
+                <Button Content="🏫 الشعب الصفوفية" Style="{StaticResource SideButtonStyle}" Click="Button_Click_3"/>
+                <Button Content="🏫 المواد الدراسية" Style="{StaticResource SideButtonStyle}" Click="Subject_Click"/>
+                <Button Content="🏫 الامتحانات" Style="{StaticResource SideButtonStyle}" Click="Exam_Click"/>
+
+
+                <Button Content="👨‍🏫 المعلمين" Style="{StaticResource SideButtonStyle}" Click="Teachers_Click"/>
+                <!-- <Button Content="👨‍💼 الموظفين" Style="{StaticResource SideButtonStyle}" Click="Employees_Click"/> -->
+                <Button Content="💰 الرواتب" Style="{StaticResource SideButtonStyle}" Click="Salary_Click"/>
+                <Button Content="💰 الرسوم" Style="{StaticResource SideButtonStyle}" Click="Fees_Click"/>
+                <Button Content="📊 التقارير" Style="{StaticResource SideButtonStyle}" Click="Reports_Click"/>
+
+            </StackPanel>
+        </Border>
+
+        <!-- الجزء الرئيسي (صفحات المحتوى) -->
+        <ContentControl x:Name="MainFrame" Grid.Column="1" />
+    </Grid>
+
+</Window>

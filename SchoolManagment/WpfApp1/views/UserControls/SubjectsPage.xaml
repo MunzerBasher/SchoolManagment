@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="School.views.UserControls.SubjectsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="av"
+             Background="#F4F6F9">
+
+    <UserControl.Resources>
+        <DropShadowEffect x:Key="DropShadow" BlurRadius="8" ShadowDepth="2" Opacity="0.2" Color="Black"/>
+
+        <Style x:Key="BeautifulTextBox" TargetType="TextBox">
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Margin" Value="0,6,0,0"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#1E293B"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style x:Key="BeautifulButtonBlue" TargetType="Button">
+            <Setter Property="Background" Value="#2563EB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Margin" Value="8,0"/>
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Loaded="ScrollViewer_Loaded">
+        <Grid Margin="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="446*"/>
+                <ColumnDefinition Width="43*"/>
+                <ColumnDefinition Width="134*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- العنوان -->
+            <TextBlock Text="📚 إدارة المواد الدراسية"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       Foreground="#1E293B"
+                       Margin="0,0,0,25" Grid.ColumnSpan="3"/>
+
+            <!-- الحقول -->
+            <Border
+                    Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Margin="0,62,0,25"
+                    Effect="{StaticResource DropShadow}" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Margin="8">
+                        <TextBlock Text="كود المادة:" FontWeight="SemiBold" Foreground="#334155"/>
+                        <TextBox x:Name="txtCode" Style="{StaticResource BeautifulTextBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="8" Grid.Column="1">
+                        <TextBlock Text="اسم المادة:" FontWeight="SemiBold" Foreground="#334155"/>
+                        <TextBox x:Name="txtName" Style="{StaticResource BeautifulTextBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="8" Grid.Column="2">
+                        <TextBlock Text="الصف الدراسي:" FontWeight="SemiBold" Foreground="#334155"/>
+                        <ComboBox x:Name="cbClass" Height="36" Margin="0,6,0,0" Padding="6,4" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="cbClass_SelectionChanged"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="3" VerticalAlignment="Bottom" Margin="10,0,0,0">
+                        <Button x:Name="btnAdd" Content="➕ إضافة" Width="110" Style="{StaticResource BeautifulButtonBlue}" Click="AddButton_Click"/>
+                        <Button x:Name="btnUpdate" Content="🔄 تحديث" Width="110" Style="{StaticResource BeautifulButtonBlue}" Click="UpdateButton_Click"/>
+                        <Button x:Name="btnDelete" Content="🗑 حذف" Width="90" Background="#DC2626" Foreground="White" Click="DeleteButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- البحث -->
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,19,0,20">
+                <TextBlock Text="🔍 بحث:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox x:Name="txtSearch" Width="300" Style="{StaticResource BeautifulTextBox}" TextChanged="SearchTextBox_TextChanged"/>
+                <!--   <Button Content="عرض الكل" Style="{StaticResource BeautifulButtonBlue}" Click="RefreshButton_Click" Margin="12,0,0,0"/> -->
+            </StackPanel>
+
+            <!-- الجدول -->
+            <Border Grid.Row="2"
+                    Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Effect="{StaticResource DropShadow}" Grid.ColumnSpan="3" Margin="0,62,0,0" Grid.RowSpan="2">
+                <DataGrid x:Name="dgSubjects"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          AlternatingRowBackground="#F9FAFB"
+                          RowHeight="38"
+                          HeadersVisibility="Column"
+                          CanUserAddRows="False"
+                          SelectionMode="Single"
+                          SelectionChanged="dgSubjects_SelectionChanged">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#2563EB"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Height" Value="44"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu Background="WhiteSmoke" 
+                        BorderBrush="#2563EB" 
+                        BorderThickness="1" 
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        Padding="5">
+                        <MenuItem Header="✏️ تعديل" Click="EditMenuItem_Click"
+                        Background="White" Foreground="#1E293B"
+                        Padding="5,2"/>
+                        <MenuItem Header="🗑 حذف" Click="DeleteMenuItem_Click"
+                         Background="White" Foreground="#DC2626"
+                         Padding="5,2"
+                         />
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

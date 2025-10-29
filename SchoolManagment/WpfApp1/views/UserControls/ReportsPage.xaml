@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="School.views.UserControls.ReportsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             Background="#F9FAFB">
+
+    <UserControl.Resources>
+        <!-- تأثير ظل بسيط -->
+        <DropShadowEffect x:Key="DropShadow" ShadowDepth="2" BlurRadius="8" Color="#44000000"/>
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 🔹 Header -->
+        <Border Background="White" CornerRadius="10" Padding="15" Margin="0 0 0 10"
+                Effect="{StaticResource DropShadow}">
+            <DockPanel LastChildFill="True">
+                <TextBlock Text="📊 التقارير" 
+                           DockPanel.Dock="Left"
+                           FontSize="24" FontWeight="Bold" Foreground="#1E293B"
+                           VerticalAlignment="Center"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0">
+                    <ComboBox Width="180" Margin="0,0,10,0">
+                        <ComboBoxItem Content="تقرير الطلاب"/>
+                        <ComboBoxItem Content="تقرير الرسوم"/>
+                        <ComboBoxItem Content="تقرير الحضور"/>
+                    </ComboBox>
+                    <Button Content="عرض التقرير" Background="#3B82F6" Foreground="White" Padding="10,5" Margin="0,0,10,0"/>
+                    <Button Content="تصدير PDF" Background="#10B981" Foreground="White" Padding="10,5"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- 🔹 Filters & Data -->
+        <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="15"
+                Effect="{StaticResource DropShadow}">
+            <DockPanel>
+                <!-- Filters -->
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBox Width="180" Margin="0,0,10,0" VerticalAlignment="Center">
+                        <TextBox.ToolTip>بحث بالاسم...</TextBox.ToolTip>
+                    </TextBox>
+                    <ComboBox Width="150" Margin="0,0,10,0">
+                        <ComboBoxItem Content="الصف الأول"/>
+                        <ComboBoxItem Content="الصف الثاني"/>
+                    </ComboBox>
+                    <DatePicker Width="150" Margin="0,0,10,0"/>
+                    <DatePicker Width="150"/>
+                </StackPanel>
+
+                <!-- DataGrid -->
+                <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" Margin="0 10 0 0"
+                          HeadersVisibility="Column" FontSize="14" AlternatingRowBackground="#F1F5F9">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="المعرف" Binding="{Binding Id}" Width="Auto"/>
+                        <DataGridTextColumn Header="الاسم" Binding="{Binding Name}" Width="*"/>
+                        <DataGridTextColumn Header="التاريخ" Binding="{Binding Date}" Width="Auto"/>
+                        <DataGridTextColumn Header="القيمة" Binding="{Binding Amount}" Width="Auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Border>
+
+        <!-- 🔹 Summary Cards -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 15 0 0">
+            <Border Background="#3B82F6" CornerRadius="10" Padding="15" Width="150" Margin="10,0">
+                <StackPanel>
+                    <TextBlock Text="عدد الطلاب" Foreground="White" FontWeight="Bold"/>
+                    <TextBlock Text="240" Foreground="White" FontSize="18"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#10B981" CornerRadius="10" Padding="15" Width="150" Margin="10,0">
+                <StackPanel>
+                    <TextBlock Text="إجمالي الرسوم" Foreground="White" FontWeight="Bold"/>
+                    <TextBlock Text="32,000 $" Foreground="White" FontSize="18"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="#F59E0B" CornerRadius="10" Padding="15" Width="150" Margin="10,0">
+                <StackPanel>
+                    <TextBlock Text="نسبة الحضور" Foreground="White" FontWeight="Bold"/>
+                    <TextBlock Text="96%" Foreground="White" FontSize="18"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>
