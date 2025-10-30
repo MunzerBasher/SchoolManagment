@@ -7,7 +7,6 @@ namespace BLL.IServices
 
 
         Task<IList<Fee>> GetAll();
-        Task<Fee> Get(int id);
         Task<int> Add(Fee fee);
         Task<int> Update(Fee fee);
         Task<int> Delete(int id);

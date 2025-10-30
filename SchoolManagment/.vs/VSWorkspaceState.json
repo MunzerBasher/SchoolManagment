@@ -4,6 +4,7 @@
     "\\BLL",
     "\\DAL",
     "\\DAL\\IRepositories",
+    "\\DAL\\Repositories",
     "\\WpfApp1",
     "\\WpfApp1\\views",
     "\\WpfApp1\\views\\Pages",

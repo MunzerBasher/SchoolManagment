@@ -30,10 +30,7 @@ namespace SchoolBLL.Services
             return await _repository.Delete(id);
         }
 
-        public async Task<Fee> Get(int id)
-        {
-            return await _repository.Get(id);
-        }
+      
 
         public async Task<IList<Fee>> GetAll()
         {
@@ -43,8 +40,8 @@ namespace SchoolBLL.Services
         public async Task<int> Save(Fee fee)
         {
            
-            var existing = await _repository.Get(fee.FeeId);
-            if (existing == null)
+          
+            if (await _repository.isExist(fee.FeeId))
                 return await Add(fee);
             else
                 return await Update(fee);

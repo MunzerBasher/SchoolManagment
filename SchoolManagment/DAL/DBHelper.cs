@@ -42,6 +42,7 @@ namespace SchoolDLL
                         await conn.OpenAsync();
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         da.Fill(dt);
+                        await conn.CloseAsync();
                     }
                 }
             }
@@ -72,6 +73,7 @@ namespace SchoolDLL
 
                         await conn.OpenAsync();
                         result = await cmd.ExecuteScalarAsync(cancellationToken: cancellationToken);
+                        await conn.CloseAsync();
                     }
                 }
             }

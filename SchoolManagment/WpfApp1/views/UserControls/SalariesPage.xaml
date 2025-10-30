@@ -98,8 +98,8 @@
                 <!-- الموظف -->
                 <StackPanel Margin="5">
                     <TextBlock Text="الموظف:" FontWeight="SemiBold"/>
-                    <ComboBox x:Name="EmployeeComboBox" Style="{StaticResource BeautifulComboBox}"
-                              DisplayMemberPath="FullName" SelectedValuePath="Id" SelectionChanged="EmployeeComboBox_SelectionChanged"/>
+                    <ComboBox x:Name="EmployeeComboBox" Style="{StaticResource BeautifulComboBox}" 
+                              DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="EmployeeComboBox_SelectionChanged"/>
                 </StackPanel>
 
                 <!-- الشهر -->

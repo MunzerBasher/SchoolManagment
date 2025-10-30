@@ -16,7 +16,9 @@ namespace School.views
     /// </summary>
     public partial class DashboardWindow : Window
     {
-        public DashboardWindow(IExamService examService,ISalaryServices salaryServices , IFeesServices feeServices,ITeacherService teacherService, IStudentServices studentServices,ISubjectServices subjectServices ,ISectionServices sectionServices, IClassServices classServices, IShareServices shareservices , IYearServices yearServices, ISemesterServices semesterServices , ILevelServices levelServices)
+        public DashboardWindow(IExamService examService,
+           ISalaryServices salaryServices ,
+            IFeesServices feeServices,ITeacherService teacherService, IStudentServices studentServices,ISubjectServices subjectServices ,ISectionServices sectionServices, IClassServices classServices, IShareServices shareservices , IYearServices yearServices, ISemesterServices semesterServices , ILevelServices levelServices)
         {
             InitializeComponent();
             MainFrame.Content = new HomePage();
@@ -79,7 +81,9 @@ namespace School.views
         private void Subject_Click(object sender, RoutedEventArgs e)
       => MainFrame.Content = new SubjectsPage(_shareServices, _subjectServices);
         private void Salary_Click(object sender, RoutedEventArgs e)
-      => MainFrame.Content = new SalariesPage(_salaryServices);
+      => MainFrame.Content = new SalariesPage(
+         _salaryServices
+          );
     }
 
 }

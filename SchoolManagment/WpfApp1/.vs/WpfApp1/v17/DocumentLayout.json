@@ -3,14 +3,25 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{329F7D07-62AF-4A9A-9BA5-0D9BAE320B71}|..\\DAL\\DAL.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\dal\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{329F7D07-62AF-4A9A-9BA5-0D9BAE320B71}|..\\DAL\\DAL.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\dal\\repositories\\feesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\wpfapp1\\views\\usercontrols\\examspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|solutionrelative:views\\usercontrols\\examspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{329F7D07-62AF-4A9A-9BA5-0D9BAE320B71}|..\\DAL\\DAL.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\dal\\irepositories\\ifeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\wpfapp1\\views\\usercontrols\\feespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|solutionrelative:views\\usercontrols\\feespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{329F7D07-62AF-4A9A-9BA5-0D9BAE320B71}|..\\DAL\\DAL.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\dal\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\wpfapp1\\views\\usercontrols\\salariespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|solutionrelative:views\\usercontrols\\salariespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\wpfapp1\\views\\usercontrols\\salariespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|solutionrelative:views\\usercontrols\\salariespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{619BDC1D-DD88-47B8-A196-6BB9342F97CF}|School.csproj|c:\\users\\dell\\desktop\\wpf\\schoolmanagment\\wpfapp1\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -24,7 +35,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,52 +87,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SalaryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\SalaryRepository.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\Repositories\\SalaryRepository.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\SalaryRepository.cs",
-              "RelativeToolTip": "..\\DAL\\Repositories\\SalaryRepository.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAADwv10AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IFeesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\IRepositories\\IFeesRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\IRepositories\\IFeesRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\IRepositories\\IFeesRepository.cs",
+              "RelativeToolTip": "..\\DAL\\IRepositories\\IFeesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T14:22:37.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T13:41:48.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FeesRepository.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\FeesRepository.cs",
               "RelativeDocumentMoniker": "..\\DAL\\Repositories\\FeesRepository.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\FeesRepository.cs",
               "RelativeToolTip": "..\\DAL\\Repositories\\FeesRepository.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAADwv10AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAIwAAAAAAAAAAADwv5IAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T14:18:05.369Z",
+              "WhenOpened": "2025-10-30T13:36:11.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ExamsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\ExamsPage.xaml.cs",
-              "RelativeDocumentMoniker": "views\\UserControls\\ExamsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\ExamsPage.xaml.cs",
-              "RelativeToolTip": "views\\UserControls\\ExamsPage.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
+              "Title": "FeesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\FeesPage.xaml.cs",
+              "RelativeDocumentMoniker": "views\\UserControls\\FeesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\FeesPage.xaml.cs",
+              "RelativeToolTip": "views\\UserControls\\FeesPage.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvxYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T11:17:03.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T12:51:13.719Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "SalaryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\SalaryRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repositories\\SalaryRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\DAL\\Repositories\\SalaryRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Repositories\\SalaryRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T08:52:09.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SalariesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\SalariesPage.xaml.cs",
+              "RelativeDocumentMoniker": "views\\UserControls\\SalariesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\SalariesPage.xaml.cs",
+              "RelativeToolTip": "views\\UserControls\\SalariesPage.xaml.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAIkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T06:22:27.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SalariesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\SalariesPage.xaml",
+              "RelativeDocumentMoniker": "views\\UserControls\\SalariesPage.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\views\\UserControls\\SalariesPage.xaml",
+              "RelativeToolTip": "views\\UserControls\\SalariesPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-30T08:01:22.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\WPF\\SchoolManagment\\WpfApp1\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAEMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAC8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-19T19:31:40.501Z"
             }

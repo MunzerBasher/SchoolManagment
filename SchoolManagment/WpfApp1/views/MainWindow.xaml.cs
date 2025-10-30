@@ -23,8 +23,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        public MainWindow(IExamService examService,ISalaryServices salaryServices ,IFeesServices feeServices,ITeacherService teacherService,IStudentServices studentServices,ISubjectServices subjectServices, ISectionServices sectionServices, IClassServices classServices ,IYearServices yearServices , ISemesterServices semesterServices, ILevelServices levelServices,IShareServices shareServices)
+        //ISalaryServices salaryServices    
+        public MainWindow(IExamService examService,IFeesServices feeServices, ISalaryServices salaryServices, ITeacherService teacherService,IStudentServices studentServices,ISubjectServices subjectServices, ISectionServices sectionServices, IClassServices classServices ,IYearServices yearServices , ISemesterServices semesterServices, ILevelServices levelServices,IShareServices shareServices)
         {
             InitializeComponent();
             _semesterServices = semesterServices;
@@ -56,8 +56,11 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var dashboard = new DashboardWindow(_examService,_salaryServices, _feeServices, _teacherService, _studentServices, _subjectServices, _sectionServices,_classServices, _shareServices, _yearService, _semesterServices, _levelServices);
+            var dashboard = new DashboardWindow(_examService,
+                _salaryServices,
+                _feeServices, _teacherService, _studentServices, _subjectServices, _sectionServices,_classServices, _shareServices, _yearService, _semesterServices, _levelServices);
             dashboard.Show();
+
 
             
             Application.Current.Windows[0].Close();

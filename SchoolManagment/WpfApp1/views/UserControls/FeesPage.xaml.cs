@@ -144,16 +144,16 @@ namespace School.views.UserControls
         private async void EditFee_Click(object sender, RoutedEventArgs e)
         {
             var id = Convert.ToInt32(((Button)sender).Tag);
-            var fee = await _service.Get(id);
-            if (fee != null)
-            {
-                _selected = fee;
-                // fill UI
-                txtAmount.Text = fee.Amount.ToString();
-                cbFeeType.SelectedItem = _feeTypes.FirstOrDefault(x => x.FeeTypeId == fee.FeeTypeId);
-                // set student selection accordingly
-                dgFees.SelectedItem = _selected;
-            }
+            //var fee = await _service.
+            //if (fee != null)
+            //{
+            //    _selected = fee;
+            //    // fill UI
+            //    txtAmount.Text = fee.Amount.ToString();
+            //    cbFeeType.SelectedItem = _feeTypes.FirstOrDefault(x => x.FeeTypeId == fee.FeeTypeId);
+            //    // set student selection accordingly
+            //    dgFees.SelectedItem = _selected;
+            //}
         }
 
         private async void MakePayment_Click(object sender, RoutedEventArgs e)

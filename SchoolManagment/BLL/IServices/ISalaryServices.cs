@@ -7,10 +7,14 @@ namespace BLL.IServices
 {
     public interface ISalaryServices
     {
-        Task<List<SalaryModel>> GetAllSalariesAsync();
-        Task UpdateSalaryAsync(SalaryModel model);
-        Task AddSalaryAsync(SalaryModel model);
-        Task DeleteSalaryAsync(int id);
+        Task<List<Salary>> GetAllSalariesAsync();
+        Task<int> UpdateSalaryAsync(SalaryModel model);
+        Task<int> AddSalaryAsync(SalaryModel model);
+        Task<int> DeleteSalaryAsync(int id);
+        Task<int> IsExistAsync(int id);
+        Task<bool> SaveAsync(SalaryModel model);
+        Task<List<Employee>> GetAllEmployeesAsync();
+
 
     }
 }
